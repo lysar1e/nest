@@ -15,7 +15,7 @@ import { ConfigModule } from "@nestjs/config";
     ConfigModule.forRoot(),
     TypeOrmModule.forFeature([User]),
     JwtModule.register({
-      secret: process.env.JWT_SECRET,
+      secret: "iJj6XVxAjH7LPhpJrhdbRw6H9wjNRBKo",
     }),
   ],
 })

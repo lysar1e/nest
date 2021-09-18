@@ -8,7 +8,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, "jwt") {
   constructor() {
     super({
       ignoreExpiration: false,
-      secretOrKey: process.env.JWT_SECRET,
+      secretOrKey: "iJj6XVxAjH7LPhpJrhdbRw6H9wjNRBKo",
       jwtFromRequest: ExtractJwt.fromExtractors([
         (request: Request) => {
           let data = request.cookies["access"];

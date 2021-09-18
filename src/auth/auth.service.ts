@@ -73,7 +73,7 @@ export class AuthService {
       throw new ForbiddenException("Refresh token is not valid!");
     }
     const validated = await this.jwtService.verifyAsync(refreshToken, {
-      secret: process.env.REFRESH_JWT_SECRET,
+      secret: "Tv9hSdJ51H8yOoFuyZ24ef6MBDItD8Tb",
     });
     const newAccessToken = await this.generateAccessToken(validated.id);
     const newRefreshToken = await this.generateRefreshToken(validated.id);
@@ -93,7 +93,7 @@ export class AuthService {
     return await this.jwtService.signAsync(
       { id: userId },
       {
-        secret: process.env.REFRESH_JWT_SECRET,
+        secret: "Tv9hSdJ51H8yOoFuyZ24ef6MBDItD8Tb",
         expiresIn: "200d",
       }
     );

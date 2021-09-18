@@ -7,6 +7,6 @@ async function bootstrap() {
   app.use(cookieParser());
   app.enableCors({ origin: "http://fasfafsa.fun", credentials: true });
   app.setGlobalPrefix("api");
-  await app.listen(process.env.PORT || 5000);
+  await app.listen(process.env.PORT || 8080);
 }
 bootstrap();
